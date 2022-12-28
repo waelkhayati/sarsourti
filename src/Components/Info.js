@@ -1,42 +1,69 @@
 import React from 'react';
-import thumbnail from '../Assets/TBS.jpg'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
 
 function Info({info}) {
-    return (
-        
-        <React.Fragment>
-            <Col>
-                <Container style={{margin: '2rem 0'}}>
-                    <Card className="article-style" >
-                        <div className="card-img-top">
-                            <img src={thumbnail} alt="" className="img-fluid article-img"/>
-                        </div>
-                        <div className="card-body">
-                            <Row>
-                                <Col>
-                                    <h2><a href="">{info.title}</a></h2>
-                                </Col>
-                                <Col lg={1} md={2} sm={3} xs={9}>
-                                    <p>{info.date}</p>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <p>{info.description}</p>
-                            </Row>
-                            <Row>
-                                <span><a href="">Read More</a></span>
-                            </Row>
-                        </div>       
-                    </Card>
-                </Container>
-            </Col>
-        
+
+
+        return (   
+            <React.Fragment>
+                        <div className="job-list__wrapper mb-5">
+                                <div className="card p-0 mb-3 border-0 shadow-sm ">
+                                    <div className="card-body">
+                                        <span className='row '>
+                                            <span className="col-1 color--heading d-lg-inline d-none">
+                                                <span className="badge badge-circle background--danger text-white mx-3 my-2">{info.major}</span> 
+                                            </span>
+                                            <span className="col-11">
+                                                <span className="row my-1 justify-content-between align-items-center">
+
+                                                    <span className="col-6 col-md-6 my-3 px-0 my-sm-0 col-sm-5 color--text text-left">
+                                                        <i className="fas fa-book mx-1"></i>
+                                                        {info.course_id}:
+                                                        {info.course_name}
+                                                    </span>
+                                                    
+
+                                                    <span className="col-2 col-md-2 my-3 px-0 my-sm-0 color--heading text-left d-lg-none d-md-flex">
+                                                        <span className="badge background--danger text-white mx-3 my-2">{info.major}</span> 
+                                                    </span>
+
+                                                    
+
+                                                    <span className="col-4 col-md-4 my-3 px-0 my-sm-0 col-sm-4 color--text text-left">
+                                                        <i className="fas fa-user mx-1"></i>
+                                                        {info.professor}
+                                                    </span>
+                                                </span>
+
+                                                <span className='row my-1'>
+                                                    <span className="col-4 col-md-4 my-3 px-0 my-sm-0 col-sm-3 color--text text-left">
+                                                        <i className="fas fa-users mx-1"></i> {info.level}
+                                                    </span>
+
+                                                    <span className="col-4 col-md-4 my-3 px-0 my-sm-0 col-sm-6 color--text text-left">
+                                                        <i className="fas fa-clock mx-1"></i> {info.time}
+                                                    </span>
+
+                                                    <span className="col-3 col-md-3 my-3 px-0 my-sm-0 col-sm-3 color--text text-left">
+                                                        <i className="fas fa-map-marker-alt mx-1"></i> {info.room}
+                                                    </span>
+                                                    
+                                                    <span className="d-none d-md-block col-1 px-0 text-center color--text">
+                                                        <button className="btn btn-light">
+                                                            <small><i className="fas fa-bell"></i></small>
+                                                        </button>
+                                                    </span>
+                                                    
+                                                </span>
+                                            </span>
+                                        </span>   
+                                    </div>
+                                </div>
+                            </div>
+                            
             </React.Fragment>
-    );
+
+        );
+
 }
 
 export default Info;
