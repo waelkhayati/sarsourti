@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sarsourti/static/css/main.a8f3a191.css",
+    "main.js": "/sarsourti/static/js/main.e9890030.js",
+    "static/js/787.28cb0dcd.chunk.js": "/sarsourti/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/sarsourti/index.html",
+    "main.a8f3a191.css.map": "/sarsourti/static/css/main.a8f3a191.css.map",
+    "main.e9890030.js.map": "/sarsourti/static/js/main.e9890030.js.map",
+    "787.28cb0dcd.chunk.js.map": "/sarsourti/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a8f3a191.css",
+    "static/js/main.e9890030.js"
+  ]
+}
