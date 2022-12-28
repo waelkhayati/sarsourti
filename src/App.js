@@ -15,7 +15,7 @@ function App() {
 
       <Container>
         <Row>
-          <ArticleList schedule_title="Final Exams Schedule Fall Term"/>
+          <ArticleList/>
         </Row>     
       </Container>
 

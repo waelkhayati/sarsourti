@@ -56,30 +56,32 @@ function ArticleList(props) {
 
     return (
         <React.Fragment>     
-            <section id="sectionJobList" className="section section-job-list gradient-light--lean-left">
+            <section id="sectionJobList" className="section section-job-list gradient-light--lean-left ">
                 <div className="container">
 
                     <div className="row row-grid justify-content-center">
 
-                    <div className="col-md-8 col-lg-7 col-xl-6 text-center">
-                        <h2 className="section__title my-5">{page_title}</h2>
+                        <div className="col-md-8 col-lg-7 col-xl-6 text-center">
+                            <h2 className="section__title my-5">{page_title}</h2>
+                        </div>
+
+                        <div className="col-md-12">
+                            <form className="filter-form mb-5">
+                                <div className="row">
+                                    <input className="form-control" onKeyUp="myFunction()" id="myInput" type="text" placeholder="Search.."/>
+                                </div>
+                            </form>  
+                        </div>
+                    
                     </div>
 
-                    <div className="col-md-12">
-
-                        <form className="filter-form mb-5">
-                            <div className="row">
-                                <input className="form-control" onKeyUp="myFunction()" id="myInput" type="text" placeholder="Search.."/>
-                            </div>
-                        </form>
-
-                    {examList}          
-                        
-                    </div>
-
-                    </div>
                 </div>
-                </section>
+
+                {examList} 
+
+                
+
+            </section>
 
 
                 
@@ -90,20 +92,3 @@ function ArticleList(props) {
 
 
 export default ArticleList;
-
-function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
